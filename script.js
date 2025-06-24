@@ -1,12 +1,12 @@
-function pyramid(character, rows, isInverted) {
+function pyramid(character, numOfRows, isInverted) {
   let level = "";
   if (isInverted === false) {
-    for (let i = 1; i <= rows; i++) {
-      level += " ".repeat(rows - i) + character.repeat(2 * i - 1) + "\n";
+    for (let i = 1; i <= numOfRows; i++) {
+      level += " ".repeat(numOfRows - i) + character.repeat(2 * i - 1) + "\n";
     }
   } else {
     for (let i = rows; i >= 1; i--) {
-      level += " ".repeat(rows - i) + character.repeat(2 * i - 1) + "\n";
+      level += " ".repeat(numOfRows - i) + character.repeat(2 * i - 1) + "\n";
     }
   }
   return "\n" + level;
